@@ -1,0 +1,29 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .text {
+    font-size: 13pt;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer .text .material-icons {
+    font-size: 13.3pt;
+    vertical-align: middle;
+}
+
+.red {
+    color: rgb(255, 65, 65);
+}
+
+.purple a {
+    color: rgb(173, 100, 173);
+    text-decoration: none;
+}
+
+.v-middle {
+    vertical-align: middle;
+}
