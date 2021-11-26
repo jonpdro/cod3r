@@ -1,19 +1,24 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Caneta BIC Preta",
-            "price": 15
-        },
-        {
-            "id": 2,
-            "name": "Apple Iphone 12",
-            "price": 6000
-        },
-        {
-            "id": 3,
-            "name": "Macbook Pro",
-            "price": 12000
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC Preta",
+      "price": 15
+    },
+    {
+      "id": 2,
+      "name": "Apple Iphone 12",
+      "price": 6000
+    },
+    {
+      "id": 3,
+      "name": "Macbook Pro",
+      "price": 12000
+    },
+    {
+      "name": "Geladeira",
+      "price": 1800.5,
+      "id": 4
+    }
+  ]
 }

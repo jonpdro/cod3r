@@ -1,3 +1,6 @@
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Product } from './../model/product-create';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -5,16 +8,23 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   providedIn: 'root'
 })
 export class ProductService {
+  
+  baseUrl = 'http://localhost:8080/products'
 
   constructor(
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private http: HttpClient
   ) { }
 
-  showMessage(text: string) {
+  showAlert(text: string) {
     this.snackBar.open(text, '✖', {
       duration: 2000,
       horizontalPosition: 'right',
       verticalPosition: 'top'
     })
+  }
+
+  postProduct(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.baseUrl, product)
   }
 }
