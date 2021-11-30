@@ -2,7 +2,7 @@
     <div class="card">
         <mat-card>
             <mat-card-title>
-                Produto
+                Produtos
             </mat-card-title>
             <mat-card-subtitle>
                 Cadastrar um novo produto.
@@ -18,11 +18,11 @@
         </mat-card>
     </div>  
     <div class="buttons">
-        <button class="button1" mat-raised-button (click)="createProduct()" color="primary">
-            Criar Produto
-        </button>
-        <button class="button2" mat-raised-button (click)="cancelCreateProduct()">
+        <button mat-raised-button (click)="cancelCreateProduct()" color="warn">
             Cancelar
+        </button>
+        <button mat-raised-button (click)="createProduct()" color="accent">
+            Criar Produto
         </button>
     </div>
 </div>

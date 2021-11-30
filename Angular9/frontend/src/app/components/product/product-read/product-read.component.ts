@@ -1,3 +1,5 @@
+import { ProductService } from './../../../service/product.service';
+import { Product } from './../../../model/product-create';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductReadComponent implements OnInit {
 
-  constructor() { }
+  products: Product[]
+  displayedColumns = ['id', 'name', 'price', 'action']
+
+  constructor(
+    private service: ProductService
+  ) { }
 
   ngOnInit(): void {
+    this.service.getProduct().subscribe(products => {
+      this.products = products
+    })
   }
 
 }

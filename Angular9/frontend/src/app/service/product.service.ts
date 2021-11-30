@@ -8,7 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   providedIn: 'root'
 })
 export class ProductService {
-  
+
   baseUrl = 'http://localhost:8080/products'
 
   constructor(
@@ -22,6 +22,10 @@ export class ProductService {
       horizontalPosition: 'right',
       verticalPosition: 'top'
     })
+  }
+
+  getProduct(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseUrl)
   }
 
   postProduct(product: Product): Observable<Product> {
