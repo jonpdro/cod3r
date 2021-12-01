@@ -16,9 +16,19 @@
       "price": 12000
     },
     {
-      "name": "Geladeira",
-      "price": 1800.5,
+      "name": "Motorola E7 Play",
+      "price": 950.5,
       "id": 4
+    },
+    {
+      "name": "Teste",
+      "price": 100,
+      "id": 5
+    },
+    {
+      "name": "Teste",
+      "price": 100,
+      "id": 6
     }
   ]
 }
