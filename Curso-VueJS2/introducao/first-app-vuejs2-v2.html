@@ -1,0 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <input type="text" v-on:input="alterarTitulo"> 
+    <!-- "v-on:{nome da tag}" faz com que a tag em especifíca atribua um valor direto na váriavel -->
+    <p>{{ titulo }}</p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando VueJS 2!'
+        },
+        // Criação de métodos JavaScript através do Vue
+        methods: {
+            // Existem esses dois métodos para fazer uma função no VueJS
+
+            // alterarTitulo(event) {
+            //     this.titulo = event.target.value
+            // }
+
+            alterarTitulo: function (event) {
+                this.titulo = event.target.value
+            }
+        }
+    })
+</script>

@@ -1,0 +1,19 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <!-- Interpolação de dados -->
+    <p>{{ titulo }}</p>
+</div>
+
+<script>
+    // VueJS Instance
+    new Vue({
+        // Chamando o elemento do HTML, o div, pelo Id
+        // element: '#app'
+        el: '#app',
+        // "data" recebe todos os dados que serão manipulados pelo DOM
+        data: {
+            titulo: 'Usando VueJS 2!'
+        }
+    })
+</script>
