@@ -1,0 +1,60 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <p>
+        {{ contador }}
+    </p>
+    <button v-on:click="somar(5, $event)">
+        Somar 5
+    </button>
+    <p v-on:mousemove="moverXY">
+        Mouse: {{ x }} e {{ y }}
+        <!-- Existem duas formas de estar realizando a pausa de propagação de eventos
+            (ou basicamente, parar o evento numa determinada área, no caso o span) -->
+
+        <!-- <span v-on:mousemove="parar">
+            <strong>
+                PARAR AQUI!!!
+            </strong>
+        </span> -->
+        <span v-on:mousemove.stop="">
+            <strong>
+                PARAR AQUI!!!
+            </strong>
+        </span>
+    </p>
+
+    <!-- Prevenção de Eventos, primeira forma -->
+    <a v-on:click.prevent href="https://www.google.com.br" target="_blank">Google</a>
+    <hr>
+    <!-- Prevenção de Eventos, Segunda forma -->
+    <a v-on:click="prevenir" href="https://www.google.com.br" target="_blank">Google 2</a>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: ({
+            contador: 0,
+            x: 0,
+            y: 0
+        }),
+        methods: {
+            somar(passo, evento) {
+                console.log(passo, evento)
+                this.contador += passo
+            },
+            moverXY(event) {
+                this.x = event.clientX
+                this.y = event.clientY
+            },
+            // parar(e) {
+            //     e.stopPropagation()
+            // },
+            prevenir(e) {
+                console.log('Não permitindo a execução da tag <a>.')
+                e.preventDefault()
+            }
+        }
+    })
+</script>
